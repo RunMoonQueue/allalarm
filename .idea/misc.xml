@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/develop/allalarm/app/src/main/res/layout/activity_main.xml" value="0.16875" />
+        <entry key="..\:/develop/allalarm/app/src/main/res/layout/activity_edit.xml" value="0.1" />
+        <entry key="..\:/develop/allalarm/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/develop/allalarm/app/src/main/res/layout/content_main.xml" value="0.23324275362318841" />
         <entry key="..\:/develop/allalarm/app/src/main/res/layout/fragment_first.xml" value="0.16875" />
       </map>
