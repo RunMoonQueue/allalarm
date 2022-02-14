@@ -5,15 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <include
+        android:id="@+id/edit_display_layout"
+        layout="@layout/edit_display_layout" />
+
     <View
         android:id="@+id/divider_1"
         style="@style/Divider"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/display" />
-
-    <include layout="@layout/edit_display_layout" />
+        app:layout_constraintTop_toBottomOf="@id/edit_display_layout" />
 
     <com.beardedhen.androidbootstrap.BootstrapWell
         android:id="@+id/option_layout"
@@ -27,6 +30,7 @@
         app:layout_constraintTop_toBottomOf="@id/divider_1">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/option_inner_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -59,6 +63,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/week_layout" />
+
+            <include layout="@layout/edit_day_layout" />
+
+            <View
+                android:id="@+id/divider_day"
+                style="@style/Divider"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/day_layout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

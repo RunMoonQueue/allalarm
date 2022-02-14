@@ -15,37 +15,37 @@ class EditActivity : AppCompatActivity() {
         binding = ActivityEditBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.option.setOnClickListener {
+        binding.editDisplayLayout.option.setOnClickListener {
             Log.i("MQ!", "option")
             binding.optionLayout.visibility = View.VISIBLE
             binding.vibrationLayout.visibility = View.GONE
         }
-        binding.vibration.setOnClickListener {
+        binding.editDisplayLayout.vibration.setOnClickListener {
             Log.i("MQ!", "vibration")
             binding.vibrationLayout.visibility = View.VISIBLE
             binding.optionLayout.visibility = View.GONE
         }
 
-        binding.sunday.setOnClickListener {
-            binding.sunday.isShowOutline = !binding.sunday.isShowOutline;
-        }
-        binding.monday.setOnClickListener {
-            binding.monday.isShowOutline = !binding.monday.isShowOutline;
-        }
-        binding.tuesday.setOnClickListener {
-            binding.tuesday.isShowOutline = !binding.tuesday.isShowOutline;
-        }
-        binding.wednesday.setOnClickListener {
-            binding.wednesday.isShowOutline = !binding.wednesday.isShowOutline;
-        }
-        binding.thursday.setOnClickListener {
-            binding.thursday.isShowOutline = !binding.thursday.isShowOutline;
-        }
-        binding.friday.setOnClickListener {
-            binding.friday.isShowOutline = !binding.friday.isShowOutline;
-        }
-        binding.saturday.setOnClickListener {
-            binding.saturday.isShowOutline = !binding.saturday.isShowOutline;
-        }
+//        binding.sunday.setOnClickListener {
+//            binding.sunday.isShowOutline = !binding.sunday.isShowOutline;
+//        }
+//        binding.monday.setOnClickListener {
+//            binding.monday.isShowOutline = !binding.monday.isShowOutline;
+//        }
+//        binding.tuesday.setOnClickListener {
+//            binding.tuesday.isShowOutline = !binding.tuesday.isShowOutline;
+//        }
+//        binding.wednesday.setOnClickListener {
+//            binding.wednesday.isShowOutline = !binding.wednesday.isShowOutline;
+//        }
+//        binding.thursday.setOnClickListener {
+//            binding.thursday.isShowOutline = !binding.thursday.isShowOutline;
+//        }
+//        binding.friday.setOnClickListener {
+//            binding.friday.isShowOutline = !binding.friday.isShowOutline;
+//        }
+//        binding.saturday.setOnClickListener {
+//            binding.saturday.isShowOutline = !binding.saturday.isShowOutline;
+//        }
     }
 }
