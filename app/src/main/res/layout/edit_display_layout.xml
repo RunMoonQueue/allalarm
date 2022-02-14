@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.beardedhen.androidbootstrap.BootstrapWell xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/display"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:bootstrapSize="xs"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:showIn="@layout/activity_edit">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/option_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마다"
+            app:layout_constraintBottom_toBottomOf="@id/option"
+            app:layout_constraintStart_toEndOf="@id/option"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/vibration_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="울린다"
+            app:layout_constraintBottom_toBottomOf="@id/vibration"
+            app:layout_constraintStart_toEndOf="@id/vibration"
+            app:layout_constraintTop_toBottomOf="@id/option" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/vibration"
+            style="@style/wrapping_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="   진동 및 벨소리 설정   "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/option"
+            app:showOutline="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/option"
+            style="@style/wrapping_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="                  ?                  "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showOutline="true" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.beardedhen.androidbootstrap.BootstrapWell>

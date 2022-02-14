@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/week_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/divider_month"
+    tools:showIn="@layout/activity_edit">
+
+    <TextView
+        android:id="@+id/label_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="매주"
+        app:layout_constraintStart_toEndOf="@id/radio_3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/sunday"
+        style="@style/wrapping_button"
+        android:text="일"
+        app:bootstrapBrand="danger"
+        app:bootstrapSize="sm"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/radio_3"
+        app:layout_constraintTop_toBottomOf="@id/label_3"
+        app:layout_constraintEnd_toStartOf="@id/monday"
+        app:roundedCorners="true"
+        app:showOutline="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/monday"
+        style="@style/wrapping_button"
+        android:layout_marginHorizontal="4dp"
+        android:text="월"
+        app:bootstrapSize="sm"
+        app:layout_constraintStart_toEndOf="@id/sunday"
+        app:layout_constraintTop_toBottomOf="@id/label_3"
+        app:layout_constraintEnd_toStartOf="@id/tuesday"
+        app:roundedCorners="true"
+        app:showOutline="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/tuesday"
+        style="@style/wrapping_button"
+        android:layout_marginHorizontal="4dp"
+        android:text="화"
+        app:bootstrapSize="sm"
+        app:layout_constraintStart_toEndOf="@id/monday"
+        app:layout_constraintTop_toBottomOf="@id/label_3"
+        app:layout_constraintEnd_toStartOf="@id/wednesday"
+        app:roundedCorners="true"
+        app:showOutline="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/wednesday"
+        style="@style/wrapping_button"
+        android:layout_marginHorizontal="4dp"
+        android:text="수"
+        app:bootstrapSize="sm"
+        app:layout_constraintStart_toEndOf="@id/tuesday"
+        app:layout_constraintTop_toBottomOf="@id/label_3"
+        app:layout_constraintEnd_toStartOf="@id/thursday"
+        app:roundedCorners="true"
+        app:showOutline="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/thursday"
+        style="@style/wrapping_button"
+        android:layout_marginHorizontal="4dp"
+        android:text="목"
+        app:bootstrapSize="sm"
+        app:layout_constraintStart_toEndOf="@id/wednesday"
+        app:layout_constraintEnd_toStartOf="@id/friday"
+        app:layout_constraintTop_toBottomOf="@id/label_3"
+        app:roundedCorners="true"
+        app:showOutline="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/friday"
+        style="@style/wrapping_button"
+        android:layout_marginHorizontal="4dp"
+        android:text="금"
+        app:bootstrapSize="sm"
+        app:layout_constraintStart_toEndOf="@id/thursday"
+        app:layout_constraintTop_toBottomOf="@id/label_3"
+        app:layout_constraintEnd_toStartOf="@id/saturday"
+        app:roundedCorners="true"
+        app:showOutline="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/saturday"
+        style="@style/wrapping_button"
+        android:layout_marginHorizontal="4dp"
+        android:text="토"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="sm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/friday"
+        app:layout_constraintTop_toBottomOf="@id/label_3"
+        app:roundedCorners="true"
+        app:showOutline="true" />
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+        android:id="@+id/radio_3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

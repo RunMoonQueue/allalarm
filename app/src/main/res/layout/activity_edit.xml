@@ -13,65 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/display" />
 
-    <com.beardedhen.androidbootstrap.BootstrapWell
-        android:id="@+id/display"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:bootstrapSize="xs"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/option_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="마다"
-                app:layout_constraintBottom_toBottomOf="@id/option"
-                app:layout_constraintStart_toEndOf="@id/option"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/vibration_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="울린다"
-                app:layout_constraintBottom_toBottomOf="@id/vibration"
-                app:layout_constraintStart_toEndOf="@id/vibration"
-                app:layout_constraintTop_toBottomOf="@id/option" />
-
-            <com.beardedhen.androidbootstrap.BootstrapButton
-                android:id="@+id/vibration"
-                style="@style/wrapping_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:text="   진동 및 벨소리 설정   "
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/option"
-                app:showOutline="true" />
-
-            <com.beardedhen.androidbootstrap.BootstrapButton
-                android:id="@+id/option"
-                style="@style/wrapping_button"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:text="                  ?                  "
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:showOutline="true" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.beardedhen.androidbootstrap.BootstrapWell>
+    <include layout="@layout/edit_display_layout" />
 
     <com.beardedhen.androidbootstrap.BootstrapWell
         android:id="@+id/option_layout"
@@ -88,6 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <include layout="@layout/edit_year_layout" />
+
             <View
                 android:id="@+id/divider_year"
                 style="@style/Divider"
@@ -95,6 +39,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/year_layout" />
+
+            <include layout="@layout/edit_month_layout" />
 
             <View
                 android:id="@+id/divider_month"
@@ -104,177 +50,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/month_layout" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/month_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <include layout="@layout/edit_week_layout" />
+
+            <View
+                android:id="@+id/divider_week"
+                style="@style/Divider"
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/divider_year">
-
-                <TextView
-                    android:id="@+id/label_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="매월"
-                    app:layout_constraintStart_toEndOf="@id/radio_2"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/month_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="일"
-                    app:layout_constraintBottom_toBottomOf="@id/month_edit"
-                    app:layout_constraintStart_toEndOf="@id/month_edit"
-                    app:layout_constraintTop_toBottomOf="@id/label_2" />
-
-                <com.beardedhen.androidbootstrap.BootstrapEditText
-                    android:id="@+id/month_edit"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/label_2" />
-
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/radio_2"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/year_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/label_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="매년"
-                    app:layout_constraintStart_toEndOf="@id/radio_1"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/year_year"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="년"
-                    app:layout_constraintBottom_toBottomOf="@id/year_year_edit"
-                    app:layout_constraintEnd_toStartOf="@id/year_month_edit"
-                    app:layout_constraintStart_toEndOf="@id/year_year_edit"
-                    app:layout_constraintTop_toBottomOf="@id/label_1" />
-
-                <TextView
-                    android:id="@+id/year_month"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="월"
-                    app:layout_constraintBottom_toBottomOf="@id/year_month_edit"
-                    app:layout_constraintEnd_toStartOf="@id/year_day_edit"
-                    app:layout_constraintStart_toEndOf="@id/year_month_edit"
-                    app:layout_constraintTop_toBottomOf="@id/label_1" />
-
-                <TextView
-                    android:id="@+id/year_day"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="일"
-                    app:layout_constraintBottom_toBottomOf="@id/year_day_edit"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/year_day_edit"
-                    app:layout_constraintTop_toBottomOf="@id/label_1" />
-
-                <TextView
-                    android:id="@+id/year_time_separtion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="8dp"
-                    android:text=" : "
-                    app:layout_constraintBottom_toBottomOf="@id/year_hour_edit"
-                    app:layout_constraintEnd_toStartOf="@id/year_minute_edit"
-                    app:layout_constraintStart_toEndOf="@id/year_hour_edit"
-                    app:layout_constraintTop_toBottomOf="@id/year_year_edit" />
-
-                <com.beardedhen.androidbootstrap.BootstrapEditText
-                    android:id="@+id/year_year_edit"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
-                    app:layout_constraintEnd_toStartOf="@id/year_year"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@id/radio_1"
-                    app:layout_constraintTop_toBottomOf="@id/label_1" />
-
-                <com.beardedhen.androidbootstrap.BootstrapEditText
-                    android:id="@+id/year_month_edit"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
-                    app:layout_constraintEnd_toStartOf="@id/year_month"
-                    app:layout_constraintStart_toEndOf="@id/year_year"
-                    app:layout_constraintTop_toBottomOf="@id/label_1" />
-
-                <com.beardedhen.androidbootstrap.BootstrapEditText
-                    android:id="@+id/year_day_edit"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
-                    app:layout_constraintEnd_toStartOf="@id/year_day"
-                    app:layout_constraintStart_toEndOf="@id/year_month"
-                    app:layout_constraintTop_toBottomOf="@id/label_1" />
-
-                <com.beardedhen.androidbootstrap.BootstrapEditText
-                    android:id="@+id/year_hour_edit"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
-                    app:layout_constraintEnd_toStartOf="@id/year_time_separtion"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@id/radio_1"
-                    app:layout_constraintTop_toBottomOf="@id/year_year_edit" />
-
-                <com.beardedhen.androidbootstrap.BootstrapEditText
-                    android:id="@+id/year_minute_edit"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:inputType="numberDecimal"
-                    android:maxLines="1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@id/year_time_separtion"
-                    app:layout_constraintTop_toBottomOf="@id/year_year_edit" />
-
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/radio_1"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintTop_toBottomOf="@id/week_layout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

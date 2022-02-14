@@ -25,5 +25,27 @@ class EditActivity : AppCompatActivity() {
             binding.vibrationLayout.visibility = View.VISIBLE
             binding.optionLayout.visibility = View.GONE
         }
+
+        binding.sunday.setOnClickListener {
+            binding.sunday.isShowOutline = !binding.sunday.isShowOutline;
+        }
+        binding.monday.setOnClickListener {
+            binding.monday.isShowOutline = !binding.monday.isShowOutline;
+        }
+        binding.tuesday.setOnClickListener {
+            binding.tuesday.isShowOutline = !binding.tuesday.isShowOutline;
+        }
+        binding.wednesday.setOnClickListener {
+            binding.wednesday.isShowOutline = !binding.wednesday.isShowOutline;
+        }
+        binding.thursday.setOnClickListener {
+            binding.thursday.isShowOutline = !binding.thursday.isShowOutline;
+        }
+        binding.friday.setOnClickListener {
+            binding.friday.isShowOutline = !binding.friday.isShowOutline;
+        }
+        binding.saturday.setOnClickListener {
+            binding.saturday.isShowOutline = !binding.saturday.isShowOutline;
+        }
     }
 }
